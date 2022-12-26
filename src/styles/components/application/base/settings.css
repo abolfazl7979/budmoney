@@ -1,0 +1,25 @@
+/* this file is all the routine colors and sizes that are used in the application folder styles. */
+
+/* colors */
+
+/* #333 : color used in body for standard black text in the application */
+/* #222 : color used for h1s for visual hierarchy */
+
+/* #e9ecef : color used for white text in the login button  */
+/* #1c88bf : color used for login button */
+/* #1864ab : color used for button when hovering */
+/* #339af0 : color used for button when focused on box-shadow */
+/* #364051 : steel blue color used for header */
+/* #f7f7f7 : gray color used for page-header background */
+
+
+/* spacing sizes 
+
+small size 1.2rem: 
+medium size : 1.6rem
+large size : 3.2rem
+x-large size :  4.8rem
+desktop breakpoint : 45rem
+
+
+*/

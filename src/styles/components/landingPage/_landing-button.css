@@ -1,0 +1,58 @@
+.landing-button:link,
+.landing-button:visited {
+  border-radius: 1rem;
+  white-space: nowrap;
+  padding: 0.6rem 2.8rem;
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* to fix the issue of hero button text not being center of the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms;
+}
+
+.landing-button:active,
+.landing-button:hover {
+  transition: all 300ms;
+  background: #01bf71;
+}
+
+.landing-button--dark:link,
+.landing-button--dark:visited {
+  background: #010606;
+}
+
+.landing-button--dark:active,
+.landing-button--dark:hover {
+  transition: all 300ms;
+  background: #01bf71;
+}
+
+.landing-button--white:link,
+.landing-button--white:visited {
+  background: #fff;
+  color: #010606;
+}
+
+.landing-button--white:active,
+.landing-button--white:hover {
+  transition: all 300ms;
+  background: #01bf71;
+  color: #fff;
+}
+
+.landing-button--primary-color:link,
+.landing-button--primary-color:visited {
+  background: #01bf71;
+  color: #010606;
+}
+
+.landing-button--primary-color:active,
+.landing-button--primary-color:hover {
+  background: #fff;
+  color: #010606;
+}

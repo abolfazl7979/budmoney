@@ -1,0 +1,26 @@
+.app-header {
+  background: #364051;
+}
+.app-header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+.app-header-content__title {
+  font-size: 3rem;
+}
+.app-header-title__link:link,
+.app-header-title__link:visited {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.app-header-title__link:active,
+.app-header-title__link:hover {
+}
+
+

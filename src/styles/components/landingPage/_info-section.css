@@ -1,0 +1,104 @@
+/* l-p : stands for landing page */
+.l-p-info-section {
+  
+}
+.l-p-info-section__content {
+  display: grid;
+  justify-items: center;
+  /* z-index: 1; */
+  height: 86rem;
+  width: 100%;
+  max-width: 110rem;
+  margin: 0px auto;
+  padding: 0px 2.4rem;
+}
+
+.l-p-info-section-content__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6.4rem;
+  row-gap: 1.5rem;
+  align-items: center;
+}
+
+/* modifiers for place of content and img which is unique in discover section of landing page */
+.l-p-img-first .l-p-info-section-content__column1 {
+  grid-column: 2/3;
+  grid-row: 1/ -1;
+}
+.l-p-img-first .l-p-info-section-content__column2 {
+  grid-column: 1/2;
+  grid-row: 1/ -1;
+}
+
+.l-p-info-section-content__column1 {
+}
+
+.l-p-info-section-content-column1__content {
+  /* to control the size of text content in sections */
+  max-width: 54rem;
+}
+
+.l-p-info-section-content-column1__paragraph {
+  color: #01bf71;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.l-p-info-section-content-column1__title {
+  margin-bottom: 2.4rem;
+  font-size: 4.8rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.l-p-info-section-content-column1__subtitle {
+  /* to make the paragraph never be longer than or equal to heading */
+  max-width: 44rem;
+  margin-bottom: 3.5rem;
+  font-size: 1.8rem;
+}
+
+.l-p-info-section-content__column2 {
+
+}
+.l-p-info-section-content-column1__link-container {
+  /* to avoid the button to take the whole width. */
+  display: flex;
+}
+
+.l-p-info-section-content-column2__img-container {
+  max-width: 55.5rem;
+  height: 100%;
+}
+.l-p-info-section-content-column2__img {
+  width: 100%;
+}
+
+/* 768px = 48em */
+@media (max-width: 48em) {
+  .l-p-info-section {
+    padding: 8.2rem 0;
+  }
+  .l-p-info-section-content__row {
+    grid-template-columns: 1fr;
+  }
+  .l-p-img-first .l-p-info-section-content__column1 {
+    grid-column: 1 / -1;
+    grid-row: 2/ 3;
+  }
+  .l-p-img-first .l-p-info-section-content__column2 {
+    grid-column: 1/ -1;
+    grid-row: 1/ 2;
+  }
+}
+
+/* 480px = 30em */
+@media (max-width: 30em) {
+  .l-p-info-section-content-column1__title {
+    font-size: 3.2rem;
+  }
+}

@@ -1,0 +1,20 @@
+.app-input-group{
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1.6rem;
+  row-gap: 1.6rem;
+  margin-bottom: 1.6rem;
+  max-width: 60rem;
+  width: 100%;
+  align-items: center;
+}
+.app-input-group__item{
+}
+
+/* 41em = 650px */
+@media (min-width : 41em) {
+  .app-input-group {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 3.2rem;
+  }
+}

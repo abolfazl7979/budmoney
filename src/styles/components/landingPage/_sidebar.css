@@ -1,0 +1,69 @@
+/* l-p : stands for landing page */
+.l-p-sidebar{
+  position: fixed;
+  /* navbar has z-index: 998 which does not show no more in the sidebar on scroll. */
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+
+  transition: all 300ms;
+}
+
+.l-p-sidebar__close-icon-container {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+
+  /* to rmove the extra space that close icon gets. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.l-p-sidebar__close-icon {
+  color: #fff;
+  transition: all 300ms;
+}
+.l-p-sidebar__close-icon:hover {
+  color: #01bf71;
+}
+
+.l-p-sidebar__nav{
+
+}
+.l-p-sidebar-nav__list{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center; 
+  list-style: none;
+  gap: 4.2rem;
+}
+.l-p-sidebar-nav-list__item{
+
+}
+.l-p-sidebar-nav__link{
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+
+
+  transition: all 300ms;
+}
+.l-p-sidebar-nav__link:active,
+.l-p-sidebar-nav__link:hover{
+  color: #01bf71;
+}
+
+.l-p-sidebar-nav__sign-in-container{
+}

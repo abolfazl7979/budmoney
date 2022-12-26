@@ -1,0 +1,44 @@
+/* // NOTE: the order of these styles DO matter */
+/* this is an override styles of the react-dates rangeDatePicker and SingleDatePicker */
+/* this file will be imported in the app.js */
+
+/* // Will edit everything selected including everything between a range of dates */
+
+.DateRangePickerInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  max-height: 100px;
+  width: 100%;
+}
+.CalendarDay__selected_span {
+  background: #82e0aa; 
+  color: white; 
+}
+
+/* // Will edit selected date or the endpoints of a range of dates */
+.CalendarDay__selected {
+  background: #c92a2a;
+  color: white;
+}
+
+/* // Will edit when hovered over. _span style also has this property */
+.CalendarDay__selected:hover {
+  background: orange;
+  color: white;
+}
+
+/* // Will edit when the second date (end date) in a range of dates
+// is not yet selected. Edits the dates between your mouse and said date */
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: brown;
+}
+
+/* 250px = 16em */
+@media (max-width : 16em) {
+  .DateRangePickerInput {
+    flex-direction: column;
+  }
+}

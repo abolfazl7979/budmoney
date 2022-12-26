@@ -1,0 +1,129 @@
+/* l-p : stands for landing page */
+.l-p-footer-section {
+  padding: 5.2rem;
+}
+.l-p-footer-section__content {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+.l-p-footer-section__nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 3.2rem;
+}
+.l-p-footer-section-nav__brand-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-p-footer-section__logo-title {
+  margin-bottom: 2.2rem;
+}
+.l-p-footer-section__icons {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.l-p-footer-section-logo__link:link,
+.l-p-footer-section-logo__link:visited {
+  text-decoration: none;
+  color: inherit;
+  font-size: 3rem;
+}
+.l-p-footer-section__icon {
+  width: 2.6rem;
+}
+.l-p-footer-section__copy-right {
+  margin-top: auto;
+  font-size: 1.4rem;
+  color: #888;
+  line-height: 1.5;
+}
+.l-p-footer-section-nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.l-p-footer-section-nav__list-title {
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: #444;
+  margin-bottom: 1.6rem;
+  text-transform: capitalize;
+}
+/* only for specefic not clickable address */
+.l-p-footer-section-nav__list-address {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #444;
+}
+.l-p-footer-section__list-item {
+  font-size: 1.6rem;
+  color: #666;
+}
+
+/* only for the telephone in the header that has less margin-bottom */
+.l-p-list-item--no-margin-bottom {
+  margin-bottom: -1.2rem;
+}
+
+.l-p-footer-section__logo-container a:link,
+.l-p-footer-section__logo-container a:visited {
+  display: inline-block;
+}
+
+.l-p-footer-section__icon-link:link,
+.l-p-footer-section__icon-link:visited{
+  transition: all 300ms;
+}
+
+
+.l-p-footer-section__icon-link:hover,
+.l-p-footer-section__icon-link:active{
+  filter: invert(47%) sepia(84%) saturate(1225%) hue-rotate(119deg) brightness(95%) contrast(99%);
+}
+
+.l-p-footer-section__nav-link:link,
+.l-p-footer-section__nav-link:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.l-p-footer-section__nav-link:active,
+.l-p-footer-section__nav-link:hover {
+  color: #333;
+}
+
+/* 768px = 48em */
+@media (max-width: 48em) {
+  .l-p-footer__content {
+    padding-right: 2.2rem;
+    padding-left: 2.2rem;
+  }
+  .l-p-footer-section__nav {
+    grid-template-columns: 2fr 2fr;
+    row-gap: 4.2rem;
+    align-items: start;
+  }
+ 
+  /* to fix the margin-top = auto issue happening becuase of align-items : start; */
+  .l-p-footer-section-nav__brand-content{
+    align-self: stretch;
+  }
+}
+
+/* 560px = 35em */
+@media (max-width: 35em) {
+  .l-p-footer-section {
+    padding: 5.2rem 1.2rem 2.2rem 1.2rem;
+  }
+  .l-p-footer-section__nav {
+    grid-template-columns: 1fr;
+    row-gap: 4.8rem;
+  }
+  .l-p-footer-section__copy-right {
+    margin-top: 1.6rem;
+  }
+}

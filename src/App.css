@@ -1,0 +1,6 @@
+/* all the styles subfolders files will be imported in this file. */
+@import url(./styles/base/normalize.css); 
+@import url(./styles/base/base.css);
+@import url(./styles/base/modal.css);
+@import url(./styles/components/landingPage/styles.css);
+@import url(./styles/components/styles.css);

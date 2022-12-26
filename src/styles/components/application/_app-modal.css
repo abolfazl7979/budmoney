@@ -1,0 +1,58 @@
+.app-modal {
+  position: absolute;
+  max-height: 400px;
+  max-width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 1rem;
+}
+
+
+.app-modal__close-icon-container{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+}
+.app-modal__close-icon{
+  font-size: 1.6rem;
+  color: #888;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.app-modal__close-icon:hover{
+  color: #444;
+}
+.app-modal__content{
+  padding: 1.8rem 1.2rem 1.8rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.app-modal-content__title{
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+}
+.app-modal-content__warning-message-container{
+  background: #ffe3e3;
+  padding: 1rem 1.4rem;
+  border-radius: 0.8rem;
+  margin-bottom: 2.2rem;
+}
+.app-modal-content__warning-message{
+  color: #f03e3e;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+
+.app-modal-content__delete-expense-buttons-container{
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+}

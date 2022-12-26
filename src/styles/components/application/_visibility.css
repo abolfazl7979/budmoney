@@ -1,0 +1,21 @@
+.show-for-mobile {
+  
+}
+
+.show-for-desktop {
+
+}
+
+/* 28.1em = 450px */
+@media (min-width : 28.1em) {
+  .show-for-mobile {
+    display: none;
+  }
+}
+
+/* 28.1em = 450px */
+@media (max-width : 28em) {
+  .show-for-desktop {
+    display: none;
+  }
+}

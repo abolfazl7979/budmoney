@@ -1,0 +1,9 @@
+@import url(./base/settings.css);
+@import url(./base/base.css);
+@import url(./_navbar.css);
+@import url(./_sidebar.css);
+@import url(./_hero.css);
+@import url(./_landing-button.css);
+@import url(./_info-section.css);
+@import url(./_services.css);
+@import url(./_footer.css);

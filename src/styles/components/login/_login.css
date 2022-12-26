@@ -1,0 +1,151 @@
+.login-container {
+  background: linear-gradient(
+    180deg,
+    rgba(1, 147, 86, 1) 0%,
+    rgba(10, 201, 122, 1) 100%
+  );
+  padding: 0px 2.2rem 4.8rem 2.2rem;
+  min-height: 100vh;
+}
+
+.login__title {
+}
+.login-title__link:link,
+.login-title__link:visited{
+  display: inline-block;
+  margin-top: 1.2rem;
+  margin-left: 2.2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.8rem;
+
+  
+}
+.login-title__link:active,
+.login-title__link:hover{
+  
+}
+.login__form {
+  margin: 1.2rem auto 0px auto;
+  padding: 2.8rem 0px;
+  max-width: 48rem;
+  box-shadow: 0px 0.75rem 1.8rem rgba(0, 0, 0, 0.18);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  background: #fff;
+}
+.login-form__title {
+  margin-bottom: 1.6rem;
+  font-weight: 400;
+  color: #010606;
+  text-align: center;
+}
+.login-form-input__container {
+  position: relative;
+  width: 80%;
+}
+.login-form__invalid > .login-form__input {
+  border: 2px solid rgba(207, 18, 18, 0.923);
+}
+.login-form__input {
+  padding: 1.4rem 1.6rem;
+  border-radius: 0.45rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 2px solid #dee2e6;
+  transition: border 0.1s ease-in-out;
+  width: 100%;
+}
+.login-form__input:focus {
+  border: 0.2rem solid #4dabf7;
+}
+.login-form__label {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 1.8rem;
+  color: #646a70;
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+  cursor: text;
+}
+
+/* to solve the poisiting of the label after the error apreas. */
+.login-form__invalid > .login-form__label {
+  top: 30%;
+}
+.login-form-input__error {
+  color: rgba(207, 18, 18, 0.923);
+  padding-left: 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}
+.login-form__input:focus + .login-form__label,
+.login-form__input:not(:placeholder-shown).login-form__input:not(:focus) + .login-form__label {
+  top: 0;
+  left: 1.2rem;
+  font-size: 1.25rem;
+  background: #fff;
+  color: #4dabf7;
+  font-weight: 600;
+  padding: 0 0.5rem;
+}
+.login-form__input:not(:placeholder-shown).login-form__input:not(:focus) + .login-form__label {
+  color: #646a70;
+}
+.login-form-button__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.login-form__button {
+  padding: 1rem 4.2rem;
+  background: #010606;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 550;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.1s ease;
+  transition: "box-shadow" 0.1s ease-in;
+}
+
+.login-form__button:hover {
+  background: #01bf71;
+  box-shadow: 0px 0.6rem 1.6rem rgba(0, 0, 0, 0.07);
+}
+
+.login__google-button {
+  justify-self: center;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  width: 100px;
+}
+.login-form__no-account-text:link,
+.login-form__no-account-text:visited {
+  font-size: 1.4rem;
+  transition: all 300ms;
+  color: inherit;
+  text-align: center;
+}
+
+.login-form__no-account-text:active,
+.login-form__no-account-text:hover {
+  text-decoration: none;
+}
+
+/* 300px = 19em */
+@media (max-width : 19em) {
+  .login-form-input__container {
+    width: 95%;
+  }
+}

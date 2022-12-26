@@ -1,0 +1,18 @@
+/* some base classes that are used in the styles that are located in the landing page folder */
+.l-p-light--background  {
+  background: #f9f9f9;
+}
+.l-p-light--text {
+  color: #f7f8fa;
+}
+.l-p-dark--background {
+  background: #010606;
+}
+.l-p-dark--text {
+  color: #010606;
+}
+
+/* for the nav-bar to get activated on each section visit */
+.l-p-nav-active {
+  border-bottom: 3px solid #01bf71;
+}

@@ -1,0 +1,87 @@
+.app-expenses-list{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+.app-expenses-list__header {
+  background: #f7f7f7;
+  border: 1px solid #999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.2rem 1.6rem;
+}
+
+.app-expenses-list-header__text {
+  font-size: 1.6rem;
+}
+.app-expenses-list__no-expense{
+  padding: 2.4rem 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-expenses-list-item {
+  border-bottom: 1px solid #999;
+  /* padding: 1.2rem; */
+  transition: all 0.3s ease;
+}
+.app-expenses-list-item:hover {
+  background: #f1f3f5;
+}
+.app-expenses-list-item__link:link,
+.app-expenses-list-item__link:visited {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.2rem;
+}
+.app-expenses-list-item__link:active,
+.app-expenses-list-item__link:hover {
+}
+
+
+
+.app-expenses-list-item__title{
+  font-size: 1.8rem;
+  font-weight: 700;
+  word-break: break-all;
+}
+.app-expenses-list-item__category-paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+.app-expenses-list-item__date{
+  font-size: 1.4rem;
+}
+
+.app-expenses-list-item__amount{
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+
+/* 28.1em = 450px */
+@media (min-width: 28.1em) {
+  .app-expenses-list-item__link:link,
+  .app-expenses-list-item__link:visited {
+    padding: 1.6rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  .app-expenses-list-header__text {
+    font-size: 1.6rem;
+  }
+}
+
+

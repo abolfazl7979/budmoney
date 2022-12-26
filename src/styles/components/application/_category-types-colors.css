@@ -1,0 +1,57 @@
+.Housing--color {
+  color: #147fe4;
+}
+.Transportation--color {
+  color: #e8590c;
+}
+.Health-care--color {
+  color: #5f3dc4;
+}
+.Grocery--color {
+  color: #2f9e44;
+}
+.Utility--color {
+  color: #087f5b;
+}
+.Entertainment--color {
+  color: #fcc00c;
+}
+.Product--color {
+  color: #f03e3e;
+}
+.Service--color {
+  color: #cd27f7;
+}
+.Others--color {
+  color: #adb5bd;
+}
+
+
+/* backgrounds */
+.Housing--background {
+  background: #1864ab;
+}
+.Transportation--background {
+  background: #e8590c;
+}
+.Groceries--background {
+  background: #2f9e44;
+}
+.Health-care--background {
+  background: #5f3dc4;
+}
+.Utility--background {
+  background: #087f5b;
+}
+.Entertainment--background {
+  background: #fcc419;
+}
+.Product--background {
+  background: #f03e3e;
+}
+.Service--background {
+  background: #ae3ec9;
+}
+.Others--background {
+  background: #868e96;
+}

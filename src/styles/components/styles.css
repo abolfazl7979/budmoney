@@ -1,0 +1,4 @@
+/* all styles of subfolders will be imported in this file. */
+@import url(./application/_styles.css);
+@import url(./landingPage/styles.css);
+@import url(./login/styles.css);
