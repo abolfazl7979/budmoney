@@ -27,8 +27,6 @@ const inputReducer = (state, action) => {
 };
 
 const useInput = (defaultInputValue, validator, passwordInputValue) => {
-  // const [inputValue, setInputValue] = useState(defaultInputValue);
-  // const [inputTouched, setInputTouched] = useState(false);
   const initialInputReducerValue = {
     inputValue: defaultInputValue,
     inputTouched: false,

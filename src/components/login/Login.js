@@ -67,18 +67,26 @@ const Login = ({ startLogin }) => {
   }, []);
 
 
-  const nameValidator = useCallback((value) => {
+  const emailValidator = useCallback((value) => {
     if (value !== "") {
       return "";
     } else if (value === "") {
-      return "this input is required.";
+      return "email is required.";
+    }
+  }, []);
+
+  const passwordValidator = useCallback((value) => {
+    if (value !== "") {
+      return "";
+    } else if (value === "") {
+      return "password is required.";
     }
   }, []);
 
 
   const confirmPasswordValidator = useCallback((value, passwordCheck) => {
     if (value === "") {
-      return "this input is required.";
+      return "confirming password is required.";
     } else if (value !== passwordCheck) {
       return "confirmation failed.";
     } else {
@@ -93,7 +101,7 @@ const Login = ({ startLogin }) => {
     errorMessage: passwordErrorMessage,
     handleOnInputChange: handleOnPasswordInputChange,
     handleOnInputBlur: handleOnPasswordInputBlur,
-  } = useInput("", nameValidator);
+  } = useInput("", passwordValidator);
   const {
     inputValue: emailInputValue,
     dispatchToInputUsage: dispatchToEmailInputUsage,
@@ -102,7 +110,7 @@ const Login = ({ startLogin }) => {
     errorMessage: emailErrorMessage,
     handleOnInputChange: handleOnEmailInputChange,
     handleOnInputBlur: handleOnEmailInputBlur,
-  } = useInput("", nameValidator);
+  } = useInput("", emailValidator);
 
   const {
     inputValue: repeatPasswordInputValue,
