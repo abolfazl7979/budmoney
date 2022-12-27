@@ -6,18 +6,25 @@ import history from "./routers/history";
 import store from "./store/store";
 import firebase from "./firebase/firebase";
 import App from "./App";
+import ErrorBoundry from "./components/ErrorBoundry";
 import Loading from "./components/application/Loading";
 import { startSetExpenses } from "./actions/expensesActions";
 import { login, logout } from "./slices/authSlice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const loaderJsx = <Loading />;
+const loaderJsx = (
+  <ErrorBoundry>
+    <Loading />
+  </ErrorBoundry>
+);
 
 const appJsx = (
   // later add React.StrictMode
   <Provider store={store}>
-    <App />
+    <ErrorBoundry>
+      <App />
+    </ErrorBoundry>
   </Provider>
 );
 
@@ -54,7 +61,7 @@ firebase.auth().onAuthStateChanged((user) => {
     ) {
       history.push(history.location.pathname);
     } else {
-      history.push('/login')
+      history.push("/login");
     }
   }
 });

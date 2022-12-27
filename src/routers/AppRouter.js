@@ -13,6 +13,7 @@ import PublicRoute from "./PublicRoute";
 import PrivateRoute from "./PrivateRoute";
 
 
+// because of big size of landing page, we added lazy loading for this page, but other pages do not containe any huge size assets.
 const LandingPage = lazy(() => import("../pages/LandingPage"));
 
 const AppRouter = () => {
