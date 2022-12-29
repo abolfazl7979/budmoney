@@ -132,7 +132,10 @@ const ExpenseForm = ({
       }
     }
   }, [noteValue, descriptionValue, amountValue, categoryTypeValue, createdAt]);
-  usePrompt("Leave screen?", showIOpenConfirmBox);
+  usePrompt(
+    "Are you sure you want to leave this page? you will lose your entered data.",
+    showIOpenConfirmBox
+  );
 
   return (
     <form className="app-form" onSubmit={onFormSubmitionHandler}>
