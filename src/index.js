@@ -14,18 +14,21 @@ import { login, logout } from "./slices/authSlice";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const loaderJsx = (
-  <ErrorBoundry>
-    <Loading />
-  </ErrorBoundry>
+  <React.StrictMode>
+    <ErrorBoundry>
+      <Loading />
+    </ErrorBoundry>
+  </React.StrictMode>
 );
 
 const appJsx = (
-  // later add React.StrictMode
-  <Provider store={store}>
-    <ErrorBoundry>
-      <App />
-    </ErrorBoundry>
-  </Provider>
+  <React.StrictMode>
+    <Provider store={store}>
+      <ErrorBoundry>
+        <App />
+      </ErrorBoundry>
+    </Provider>
+  </React.StrictMode>
 );
 
 // to avoid redownloading the bundle everytime the application refreshes and rerenders

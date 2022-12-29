@@ -3,6 +3,7 @@ import { Circles } from "react-loader-spinner";
 import moment from "moment";
 import { SingleDatePicker } from "react-dates";
 import useInput from "../../hooks/useInput";
+import usePrompt from "../../hooks/usePrompt";
 
 const ExpenseForm = ({
   onSubmitionHandler,
@@ -20,8 +21,6 @@ const ExpenseForm = ({
   const [createdAt, setCreatedAt] = useState(
     expense ? moment(expense.expenseCreatedAt) : moment()
   );
-
-  //hook for description input
   const descriptionValidator = useCallback((value) => {
     if (!value) {
       return "Description is required.";
@@ -104,6 +103,36 @@ const ExpenseForm = ({
       });
     }
   };
+
+  // checking form dirtiness.
+  const [showIOpenConfirmBox, setShouldIOpenConfirmBox] = useState(false);
+  useEffect(() => {
+    if (
+      noteValue ||
+      descriptionValue ||
+      categoryTypeValue !== "Choose one of the options" ||
+      (amountValue !== "0" && amountValue !== "")
+    ) {
+      setShouldIOpenConfirmBox(true);
+    } else {
+      setShouldIOpenConfirmBox(false);
+    }
+
+    if (expense) {
+      if (
+        expense.expenseDescription !== descriptionValue ||
+        expense.expenseNote !== noteValue ||
+        expense.expenseCategoryType !== categoryTypeValue ||
+        (expense.expenseAmount / 100).toString() !== amountValue ||
+        !moment(expense.expenseCreatedAt).isSame(createdAt, "day")
+      ) {
+        setShouldIOpenConfirmBox(true);
+      } else {
+        setShouldIOpenConfirmBox(false);
+      }
+    }
+  }, [noteValue, descriptionValue, amountValue, categoryTypeValue, createdAt]);
+  usePrompt("Leave screen?", showIOpenConfirmBox);
 
   return (
     <form className="app-form" onSubmit={onFormSubmitionHandler}>

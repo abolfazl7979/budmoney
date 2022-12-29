@@ -1,5 +1,4 @@
-// added a custom router to be able to use the history object information in the components that are connected to redux store.
-// as a result, i can use connect and avoid using useSelector and useDispatch in the components.
+// to access history in components
 import React from "react";
 import { Router} from "react-router-dom";
 

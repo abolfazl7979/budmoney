@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 import { startAddExpense } from "../actions/expensesActions";
-import {showNotification} from '../slices/notificationsSlice';
+import { showNotification } from "../slices/notificationsSlice";
 import ExpenseForm from "../components/application/ExpenseForm";
 
 const CreateExpensePage = ({ startAddExpense, showNotification }) => {
+
   const [startTheLoaderForCreateOrEdit, setStartTheLoaderForCreateOrEdit] =
     useState(false);
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const CreateExpensePage = ({ startAddExpense, showNotification }) => {
     setStartTheLoaderForCreateOrEdit(true);
     startAddExpense(expense).then(() => {
       setStartTheLoaderForCreateOrEdit(false);
-      showNotification('expense added succesfully!', 'success')
+      showNotification("expense added succesfully!", "success");
       navigate("/dashboard", {
         replace: "push",
       });
@@ -46,7 +47,8 @@ const CreateExpensePage = ({ startAddExpense, showNotification }) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     startAddExpense: (expense) => dispatch(startAddExpense(expense)),
-    showNotification : (notificationMessage, notificationStatus) => dispatch(showNotification({ notificationMessage, notificationStatus}))
+    showNotification: (notificationMessage, notificationStatus) =>
+      dispatch(showNotification({ notificationMessage, notificationStatus })),
   };
 };
-export default connect(undefined ,mapDispatchToProps)(CreateExpensePage);
+export default connect(undefined, mapDispatchToProps)(CreateExpensePage);

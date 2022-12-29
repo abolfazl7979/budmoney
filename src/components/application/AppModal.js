@@ -9,7 +9,7 @@ const AppModal = ({
   showModal,
   setShowModal,
   setConfirmDeleteExpense,
-  confirmDeleteExpense,
+  confirmDeleteExpense
 }) => {
   return (
     <Modal
@@ -28,7 +28,7 @@ const AppModal = ({
         />
       </div>
       <div className="app-modal__content">
-        <h2 className="app-modal-content__title">{titleText}</h2>
+        {titleText && <h2 className="app-modal-content__title">{titleText}</h2>}
         {warningMessage && (
           <div className="app-modal-content__warning-message-container">
             <p className="app-modal-content__warning-message">
