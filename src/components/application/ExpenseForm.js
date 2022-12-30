@@ -10,6 +10,7 @@ const ExpenseForm = ({
   expense,
   startTheLoaderForCreateOrEdit,
   setShowModal,
+  showModalForDelete
 }) => {
   const [noteValue, setNoteValue] = useState(
     expense ? expense.expenseNote : ""
@@ -90,6 +91,8 @@ const ExpenseForm = ({
   const onFormSubmitionHandler = (e) => {
     e.preventDefault();
 
+    // to avoid the user to confirm page leave after expense created or edited 
+    setShouldIOpenConfirmBox(false);
     dispatchToDescriptionInputUsage({ type: "SET_TOUCHED_TO_TRUE" });
     dispatchToCategoryTypeInputUsage({ type: "SET_TOUCHED_TO_TRUE" });
 
@@ -105,6 +108,15 @@ const ExpenseForm = ({
   };
 
   // checking form dirtiness.
+
+  // this useEffect is for when removing an expense, it does not ask us to confirm navigation, this only happens if we edited it and then decided to remove the expense.
+  useEffect(() => {
+    if(showModalForDelete) {
+      setShouldIOpenConfirmBox(false);
+    } else {
+      setShouldIOpenConfirmBox(true);
+    }
+  }, [showModalForDelete])
   const [showIOpenConfirmBox, setShouldIOpenConfirmBox] = useState(false);
   useEffect(() => {
     if (
@@ -132,6 +144,7 @@ const ExpenseForm = ({
       }
     }
   }, [noteValue, descriptionValue, amountValue, categoryTypeValue, createdAt]);
+
   usePrompt(
     "Are you sure you want to leave this page? you will lose your entered data.",
     showIOpenConfirmBox

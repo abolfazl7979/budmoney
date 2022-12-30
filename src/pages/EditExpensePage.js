@@ -64,6 +64,7 @@ const EditExpensePage = ({
       </div>
       <div className="app-content-container">
         <ExpenseForm
+          showModalForDelete = {showModal}
           setShowModal={setShowModal}
           startTheLoaderForCreateOrEdit={startTheLoaderForCreateOrEdit}
           onSubmitionHandler={onSubmitionHandler}
